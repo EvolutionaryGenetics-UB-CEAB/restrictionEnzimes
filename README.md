@@ -19,8 +19,8 @@ the parameters used.
 - **crosstabs.R**: This is the pipeline used for the statistical analyses of our data. It contains all the tests realized and the indication of what is being analyzed.
 For example, we analyzed if there was significance between candidate and total loci of *S. ocellatus*, so you can see the comparision tested and the statistical
 method used. 
-- **supplementary_tables_and_info.xlsx**: This Excel contains all the supplementary tables of this study. In addition, it has all the information about the biological 
-processes GO terms analyzed in the four species, their name and the representative of each group. 
+- **supplementary_information.xlsx**: This Excel contains all the supplementary information about the biological processes GO terms analyzed 
+in the four species, their name and the representative of each group. 
 
 ## Support
 If you have a doubt of any file, you can email me in: ainhoa14ainhoa@gmail.com
