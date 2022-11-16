@@ -1,4 +1,4 @@
-# TFG_Ainhoa_Lopez
+# Evaluating restriction enzyme selection for genome reduction in non-model organisms
 ## Getting started
 This repository contains all the supplementary information about my final degree project: all the pipelines, the scripts used for statistical analyses, 
 the supplementary tables and the supplementary information of GO terms from REVIGO (http://revigo.irb.hr/). 
