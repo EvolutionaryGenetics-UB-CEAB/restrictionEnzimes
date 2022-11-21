@@ -1,33 +1,13 @@
 # Evaluating restriction enzyme selection for genome reduction in non-model organisms
 ## Getting started
-This repository contains all the supplementary information about my final degree project: all the pipelines, the scripts used for statistical analyses, 
-the supplementary tables and the supplementary information of GO terms from REVIGO (http://revigo.irb.hr/). 
-
-## A little introduction
-My final degree project is based on the importance of using restriction enzymes in population genomics. We have studied four non-model species
-characteristic from the Mediterranean Sea: *Symphodus ocellatus, Symphodus tinca, Paracentrotus lividus* and *Arbacia lixula.* 
-In order to do that we studied the location in a reference genome of total and candidate loci, as well as, we performed a functional analysis of the
-loci mapping to know if they shared a function. 
+This repository contains all the supplementary pipelines about the research called: **Evaluating restriction enzyme selection for genome reduction in non-model organisms my final degree project**. 
 
 ## Documentation
-- **symphodus.sh**: This pipeline was the one used for the analyses of *S. ocellatus* and *S. tinca*. It contains all the functions to obtain the location of
-loci in the reference genome, how to use the candidate list to also analyze candidate loci, and the in-house scripts used. However, some of them are found
-in the other repository (classifyBlastOut). It also has the specific version used of the reference genome used, and the software used, such as eggnog. 
-- **arbaciaparacentrotus.sh**: This pipeline was the one used for the analyses of *P. lividus* and *A. lixula*. It contains the information of all the functions used
-for obtaining the number of loci mapping, and its classification in exons, introns or intergenic regions. Moreover, it also contains the functional analysis and
-the parameters used. 
-- **crosstabs.R**: This is the pipeline used for the statistical analyses of our data. It contains all the tests realized and the indication of what is being analyzed.
-For example, we analyzed if there was significance between candidate and total loci of *S. ocellatus*, so you can see the comparision tested and the statistical
-method used. 
-- **supplementary_information.xlsx**: This Excel contains all the supplementary information about the biological processes GO terms analyzed 
-in the four species, their name and the representative of each group. 
-
-## Support
-If you have a doubt of any file, you can email me in: ainhoa14ainhoa@gmail.com
-
-## Authors and acknowledgment
-I am grateful for the support of my two tutors, Marta Pascual and Cinta Pegueroles, because they showed me a new world inside genomics and genetics. 
-I also want to thank all the team of Evolutionary Genetics of University of Barcelona for welcoming me and sharing all their knowledge and data, 
-which has been very useful for this project.
+Supplementary information of in-house scripts
+- **extractFastaFromList.py**: This script uses a fasta file with all the DNA sequences and a list of the selected loci. It extracts the corresponding sequence for each gene and creates a new fasta file with the selected loci and its corresponding sequence. 
+- **ClassifyBlastOut.py**: This script is used after using makeblast db. With makeblast db, we obtain the hits of our loci in the reference genome, meaning we obtain the number of loci mapping and not mapping. However, we do not know where are located the mapped loci. ClassifyBlastOut.py allows us to obtain the classification of mapped loci in genes (exons, introns) and intergenic regions by using blast output and the GFF file. 
+- **Longestprotein.py**: This script allows us to obtain a fasta file including the longest amino-acid sequence for each selected gene. It is coded in two main steps: the first one calculates the length of all proteins of the reference genome; the second one reads the list of mapped genes and finds identifiers of proteins corresponding to each gene thanks to the Gene ID-Protein ID file. Not only that, but it also selects the longest protein for each gene and writes the fasta sequence in an output file.
+- **eggnog_genes2gov2.py**: This script allows obtaining a list with the ID protein and the GO terms associated with the output file of eggnog. 
+integrateEggNOG.py: This script integrates all the information obtained in previous processes. It needs the classification output file, a .txt file with protein and gene IDs, and the output file from eggnog_genes2gov2.py. With these files, we finally obtain an output file with four columns: loci of the analyzed species, gene ID from reference species, protein ID from reference species and GO terms.
 
 
