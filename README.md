@@ -1,6 +1,6 @@
 # Evaluating restriction enzyme selection for genome reduction in non-model organisms
 ## Getting started
-This repository contains all the supplementary pipelines about the research called: **Evaluating restriction enzyme selection for genome reduction in non-model organisms my final degree project**. 
+This repository contains all the supplementary pipelines about the research called: **Evaluating restriction enzyme selection for genome reduction in non-model organisms.**
 
 ## Documentation
 Supplementary information of in-house scripts
